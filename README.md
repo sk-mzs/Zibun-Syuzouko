@@ -52,3 +52,6 @@
 gem carriewave
 ○検索機能
 gem ransack
+
+## 画面遷移図
+https://www.figma.com/design/CDgH1qdAf9OvZbYHFd8an4/%E5%8D%92%E5%88%B6%E3%80%80%E3%81%98%E3%81%B6%E3%82%93%E5%8F%8E%E8%94%B5%E5%BA%AB?node-id=0-1&t=WwJt0gQnhIrDeMmS-1
