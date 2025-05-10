@@ -47,7 +47,7 @@
 
 ##　 機能の実装方針予定
 ○ログイン、ログアウト機能
- gem device
+gem device
 ○画像投稿
 gem carriewave
 ○検索機能
