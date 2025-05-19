@@ -39,8 +39,11 @@ gem "devise"
 # 画像投稿機能として gem carrierwave を追加(2025.5.19 ~> 3.0)
 gem 'carrierwave', '~> 3.0'
 
-#画像の保存先として追加
+# 画像の保存先として追加
 gem 'cloudinary', '~> 2.3'
+
+# 検索機能の追加
+gem 'ransack', '4.2.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

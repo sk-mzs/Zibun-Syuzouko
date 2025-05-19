@@ -5,4 +5,12 @@ class Post < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 50 }
   validates :body, presence: true, length: { maximum: 300 }
+
+  def self.ransackable_associations(auth_object = nil)
+    ["likes", "user"]
+  end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["title"]
+  end
 end
