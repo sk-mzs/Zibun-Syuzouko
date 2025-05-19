@@ -4,6 +4,12 @@
 
 <h1>Posts</h1>
 
+<%= search_form_for @q do |f| %>
+  <%= f.label "タイトル" %>
+  <%= f.search_field :title_cont %>
+  <%= f.submit %>
+<% end %>
+
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
