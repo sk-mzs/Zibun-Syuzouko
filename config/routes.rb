@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   get "users/index"
   get "users/show"
-  resources :posts
+  resources :posts do
+    collection do
+      get :likes
+    end
+  end
+  resources :likes, only: %i[create destroy]
   devise_for :users
   root "static_pages#top"
   get "pages/show"
