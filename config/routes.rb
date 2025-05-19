@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "users/show"
   resources :posts
   devise_for :users
-  root "pages#index"
+  root "static_pages#top"
   get "pages/show"
   resources :users, only: %i[ index show destroy ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
