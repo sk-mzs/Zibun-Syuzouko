@@ -1,11 +1,14 @@
-<% content_for :title, "New post" %>
+<div class="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+  <div class="container mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">新規投稿</h2>
 
-<h1>New post</h1>
+    <div class="max-w-2xl mx-auto">
+      <%= render "form", post: @post %>
+    </div>
 
-<%= render "form", post: @post %>
-
-<br>
-
-<div>
-  <%= link_to "Back to posts", posts_path %>
+    <div class="text-center mt-8">
+      <%= link_to "投稿一覧に戻る", posts_path, 
+          class: "inline-block py-2 px-4 text-gray-600 hover:text-gray-900 font-medium transition duration-300" %>
+    </div>
+  </div>
 </div>

@@ -1,26 +1,29 @@
-<div id="<%= dom_id post %>">
+<div id="<%= dom_id post %>" class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+  <div class="aspect-w-16 aspect-h-9 relative">
+    <%= image_tag post.picture_url, class: "w-full h-48 object-cover" %>
+  </div>
 
-  <p>
-    <strong>Picture:</strong>
-    <%= image_tag post.picture_url, class: "card-img-top", width: "300", height:"200" %>
-  </p>
+  <div class="p-6">
+    <h2 class="text-xl font-bold text-gray-800 mb-2">
+      <%= post.title %>
+    </h2>
 
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
+    <p class="text-gray-600 mb-4">
+      <%= post.body %>
+    </p>
 
-  <p>
-    <strong>Body:</strong>
-    <%= post.body %>
-  </p>
+    <div class="flex items-center justify-between">
+      <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+        <%= post.area %>
+      </span>
 
-  <p>
-    <strong>Area:</strong>
-    <%= post.area %>
-  </p>
+      <% if user_signed_in? %>
+        <div class="flex items-center space-x-2">
+          <%= render 'posts/like_buttons', { post: post } %>
+        </div>
+      <% end %>
+    </div>
 
-  <% if user_signed_in? %> 
-    <%= render 'posts/like_buttons', { post: post } %>
-  <% end %>
+    <%= link_to "詳細を見る", post, class: "mt-4 inline-block text-primary hover:text-opacity-80 font-medium" %>
+  </div>
 </div>
