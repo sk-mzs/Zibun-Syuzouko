@@ -1,4 +1,4 @@
-<%# 投稿のランダム表示 %>
+<%= render 'posts/post', post: @random_post %>
 <%= link_to "みんなの投稿", posts_path %>
 <%= link_to "新規投稿", new_post_path %>
 <%= link_to "いいね一覧", likes_posts_path %>
