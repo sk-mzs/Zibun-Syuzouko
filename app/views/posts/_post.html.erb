@@ -1,4 +1,10 @@
 <div id="<%= dom_id post %>">
+
+  <p>
+    <strong>Picture:</strong>
+    <%= image_tag post.picture_url, class: "card-img-top", width: "300", height:"200" %>
+  </p>
+
   <p>
     <strong>Title:</strong>
     <%= post.title %>
@@ -14,9 +20,5 @@
     <%= post.area %>
   </p>
 
-  <p>
-    <strong>Picture:</strong>
-    <%= post.picture %>
-  </p>
 
 </div>

@@ -12,6 +12,12 @@
   <% end %>
 
   <div>
+    <%= form.label :picture, style: "display: block" %>
+    <%= form.file_field :picture, class: "form-control", accept: 'image/*'%>
+    <%= form.hidden_field :picture_cache %>
+  </div>
+
+  <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
@@ -26,10 +32,6 @@
     <%= form.text_field :area %>
   </div>
 
-  <div>
-    <%= form.label :picture, style: "display: block" %>
-    <%= form.text_field :picture %>
-  </div>
 
   <div>
     <%= form.submit %>
