@@ -40,7 +40,7 @@ gem "devise"
 gem 'carrierwave', '~> 3.0'
 
 # 画像の保存先として追加
-gem 'cloudinary', '~> 2.3'
+gem 'cloudinary', '~> 2.4'
 
 # 検索機能の追加
 gem 'ransack', '4.2.1'
